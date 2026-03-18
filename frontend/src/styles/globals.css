@@ -1,0 +1,168 @@
+/* ═══════════════════════════════════════════════
+   NEXUS — GLOBAL STYLES
+   Year: 2157 | Status: ONLINE
+═══════════════════════════════════════════════ */
+
+:root {
+  --nexus-black:    #000000;
+  --nexus-deep:     #020408;
+  --nexus-void:     #040d14;
+  --nexus-cyan:     #00f7ff;
+  --nexus-cyan-dim: #00f7ff40;
+  --nexus-cyan-glow:#00f7ffaa;
+  --nexus-purple:   #7b2fff;
+  --nexus-blue:     #0066ff;
+  --nexus-white:    #e8f4f8;
+  --nexus-muted:    #4a7a8a;
+  --nexus-border:   #00f7ff22;
+  --nexus-success:  #00ff88;
+  --nexus-warning:  #ffaa00;
+  --nexus-error:    #ff3355;
+
+  --font-display: 'Orbitron', monospace;
+  --font-mono:    'Share Tech Mono', monospace;
+  --font-body:    'Rajdhani', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--nexus-black);
+  color: var(--nexus-white);
+  font-family: var(--font-body);
+  cursor: crosshair;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--nexus-deep); }
+::-webkit-scrollbar-thumb {
+  background: var(--nexus-cyan-dim);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--nexus-cyan); }
+
+/* Selection */
+::selection {
+  background: var(--nexus-cyan-dim);
+  color: var(--nexus-cyan);
+}
+
+/* ── Scanline overlay ───────────────────────── */
+.scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 247, 255, 0.015) 2px,
+    rgba(0, 247, 255, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── Grid background ────────────────────────── */
+.grid-bg {
+  background-image:
+    linear-gradient(var(--nexus-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--nexus-border) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── Glow text ──────────────────────────────── */
+.glow-cyan {
+  text-shadow:
+    0 0 10px var(--nexus-cyan),
+    0 0 20px var(--nexus-cyan),
+    0 0 40px var(--nexus-cyan-dim);
+}
+.glow-purple {
+  text-shadow:
+    0 0 10px var(--nexus-purple),
+    0 0 20px var(--nexus-purple);
+}
+
+/* ── Glow border ────────────────────────────── */
+.border-glow {
+  border: 1px solid var(--nexus-cyan-dim);
+  box-shadow:
+    0 0 10px var(--nexus-cyan-dim),
+    inset 0 0 10px rgba(0, 247, 255, 0.03);
+}
+.border-glow:hover {
+  border-color: var(--nexus-cyan-glow);
+  box-shadow:
+    0 0 20px var(--nexus-cyan-dim),
+    inset 0 0 20px rgba(0, 247, 255, 0.05);
+}
+
+/* ── Corner bracket decoration ─────────────── */
+.bracket-corners {
+  position: relative;
+}
+.bracket-corners::before,
+.bracket-corners::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--nexus-cyan);
+  border-style: solid;
+}
+.bracket-corners::before {
+  top: 0; left: 0;
+  border-width: 2px 0 0 2px;
+}
+.bracket-corners::after {
+  bottom: 0; right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+/* ── Pulse animation ────────────────────────── */
+@keyframes pulse-cyan {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@keyframes flicker {
+  0%, 95%, 100% { opacity: 1; }
+  96% { opacity: 0.8; }
+  97% { opacity: 1; }
+  98% { opacity: 0.6; }
+  99% { opacity: 1; }
+}
+@keyframes scan-line {
+  0% { top: -5%; }
+  100% { top: 105%; }
+}
+@keyframes data-stream {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100px); opacity: 0; }
+}
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-pulse-cyan { animation: pulse-cyan 2s ease-in-out infinite; }
+.animate-flicker { animation: flicker 8s linear infinite; }
+.animate-blink { animation: blink 1s step-end infinite; }
