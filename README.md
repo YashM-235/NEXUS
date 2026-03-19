@@ -21,7 +21,7 @@
 
 ## `> cat ./overview.txt`
 
-**NEXUS** is a full-stack RAG-powered chatbot with a cinematic futuristic identity. Feed it any document — PDFs, URLs, or plain text — and interrogate it through natural language. Every answer is grounded in your documents, streamed token by token, with source attribution.
+**NEXUS** is a full-stack RAG-powered chatbot with a cinematic futuristic identity. Feed it any document - PDFs, URLs, or plain text - and interrogate it through natural language. Every answer is grounded in your documents, streamed token by token, with source attribution.
 
 The concept: an intelligence from 2157, transmitting knowledge back to the present.
 
@@ -95,7 +95,7 @@ NEXUS/
 ### Prerequisites
 - Python 3.10+
 - Node.js 18+
-- Free Groq API key → [console.groq.com](https://console.groq.com)
+- Groq API key → [console.groq.com](https://console.groq.com)
 
 ### Backend
 
