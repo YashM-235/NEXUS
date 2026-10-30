@@ -95,7 +95,7 @@ NEXUS/
 ### Prerequisites
 - Python 3.10+
 - Node.js 18+
-- Free Groq API key → [console.groq.com](https://console.groq.com)
+- Groq API key → [console.groq.com](https://console.groq.com)
 
 ### Backend
 
