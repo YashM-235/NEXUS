@@ -23,7 +23,7 @@
 
 **NEXUS** is a full-stack RAG-powered chatbot with a cinematic futuristic identity. Feed it any document - PDFs, URLs, or plain text - and interrogate it through natural language. Every answer is grounded in your documents, streamed token by token, with source attribution.
 
-The concept: an intelligence from 2157, transmitting knowledge back to the present. See you all soon..
+The concept: an intelligence from 2157, transmitting knowledge back to the present. See you soon..
 
 ---
 
@@ -180,6 +180,6 @@ frontend/dist/
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:00f7ff10,100:7b2fff&height=100&section=footer&text=NEXUS+%7C+2157&fontSize=16&fontColor=00f7ff&animation=twinkling&fontAlignY=70"/>
 
-*Built by Yash — NEXUS, March 2026*
+*Built by Yash - NEXUS, March 2026*
 
 </div>
