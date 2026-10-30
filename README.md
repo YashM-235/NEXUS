@@ -180,6 +180,6 @@ frontend/dist/
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:00f7ff10,100:7b2fff&height=100&section=footer&text=NEXUS+%7C+2157&fontSize=16&fontColor=00f7ff&animation=twinkling&fontAlignY=70"/>
 
-*Built by Yash — NEXUS, March 2026*
+*Built by Yash - NEXUS, March 2026*
 
 </div>
